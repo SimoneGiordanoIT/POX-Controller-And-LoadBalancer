@@ -1,0 +1,15 @@
+L'host che vuol conoscere il MAC address di un altro host, di cui conosce l'indirizzo IP, invia in broadcast una richiesta ARP (pacchetto di ARP Request) contenente il proprio indirizzo MAC e 
+
+l'indirizzo IP del destinatario di cui si vuole conoscere il MAC Address. Tutti i calcolatori della sottorete ricevono la richiesta: in ciascuno di essi il protocollo ARP verifica, 
+
+confrontando l'IP proprio con quello inviato, se viene richiesto il proprio MAC Address. L'host di destinazione che riconoscerà il proprio indirizzo IP nel pacchetto di ARP-request, 
+
+provvederà ad inviare una risposta (ARP Reply) contenente il proprio MAC direttamente all'host mittente (quindi in unicast).
+
+In questo modo, ogni host può scoprire l'indirizzo fisico degli altri host sulla stessa sottorete. Questo è particolarmente importante nel caso si vogliano conoscere i dispositivi di rete quali gateway, router, ecc. 
+
+per verificare eventuali malfunzionamenti di un nodo della rete stessa.
+
+Si noti che l'arrivo dell'ARP-request ad un nodo aggiorna completamente la tabella ARP presente nella cache a lei dedicata dal protocollo, senza rispetto per le voci preesistenti nella tabella di Routing.
+
+Ogni scambio di pacchetti ARP avviene tramite incapsulamento di questi all'interno di frame di livello datalink (ad es. frame Ethernet).

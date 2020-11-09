@@ -1,0 +1,21 @@
+per lanciare mininet (nella cartella con la topologia): sudo mn --custom topologia.py --topo=mytopo --controller=remote
+per lanciare pox (nella prima cartella pox (anche se il file è nella cartella dopo)): ./pox.py homework3
+
+da scrivere su terminale mininet
+
+c1 arp -s 79.12.1.1 00:00:00:00:00:55
+c2 arp -s 79.12.2.1 00:00:00:00:00:66
+c3 arp -s 79.12.3.1 00:00:00:00:00:77
+c4 arp -s 79.12.4.1 00:00:00:00:00:88
+
+
+h1 arp -s 10.0.0.1 00:00:00:00:11:11
+h2 arp -s 10.0.0.1 00:00:00:00:11:11
+h3 arp -s 10.0.0.1 00:00:00:00:11:11
+h4 arp -s 10.0.0.1 00:00:00:00:11:11
+
+da srivere su xterm
+su h1:  iperf -s -p 100
+su h2:  iperf -s -p 100
+su h3:  iperf -s -p 200
+su h4:  iperf -s -p 200
